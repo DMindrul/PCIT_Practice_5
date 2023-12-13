@@ -48,7 +48,7 @@ spec:
 
     environment {
         APP_NAME = 'mindrul_dmytro'
-        DOCKER_IMAGE_NAME = 'dmindrul/example'
+        DOCKER_IMAGE_NAME = 'dmindrul/practice5img'
     }
 
     stages {
