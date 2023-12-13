@@ -92,8 +92,8 @@ spec:
             steps {
                 container(name: 'kubectl', shell: '/bin/bash') {
                     echo 'Deploying to Kubernetes'
-                    sh "sed -i 's|DOCKER_IMAGE_NAME|${DOCKER_IMAGE_NAME}|' k8s/deployment.yaml"
-                    sh "sed -i 's|BUILD_NUMBER|${BUILD_NUMBER}|' k8s/deployment.yaml"
+                    sh "sed -i 's|ImageName|${DOCKER_IMAGE_NAME}|' k8s/deployment.yaml"
+                    sh "sed -i 's|BuildNumber|${BUILD_NUMBER}|' k8s/deployment.yaml"
                     // Застосування маніфесту
                     sh 'kubectl apply -f k8s/'
                 }
@@ -123,7 +123,6 @@ spec:
             }
             steps {
                 container(name: 'ubuntu', shell: '/bin/bash') {
-                    echo 'Testing the deployemnt with curl'
                     sh "apt-get update && apt-get install -y curl"
                     sh "curl http://practice5:80"
                 }
