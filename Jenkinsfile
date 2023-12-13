@@ -124,7 +124,7 @@ spec:
             steps {
                 container(name: 'ubuntu', shell: '/bin/bash') {
                     echo 'Testing the deployemnt with curl'
-                    sh "apt-get update && apt-get install -y curl"
+                    sh "apt-get update && apt-get instal -y curl"
                     sh "curl http://practice5:80"
                 }
 
