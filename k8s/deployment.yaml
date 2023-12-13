@@ -16,4 +16,4 @@ spec:
       - name: practice5-container
         image: DOCKER_IMAGE_NAME:BUILD_NUMBER
         ports:
-        - containerPort: 8080
+        - containerPort: 808
